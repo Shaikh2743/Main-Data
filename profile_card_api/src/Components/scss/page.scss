@@ -1,0 +1,31 @@
+.pages{
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: auto;
+    
+
+    .btnl , .btnr {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+
+    }
+    .pagecount{
+        font-size: 22px;
+        color:yellow;
+        font-weight: bold;
+        // margin-left: auto;
+        // margin-right: auto;
+        padding: 0 1%;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+
+    }
+}

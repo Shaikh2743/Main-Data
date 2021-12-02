@@ -1,0 +1,137 @@
+@charset 'UTF-8';
+
+//import mixin "grid template is defined "
+@import "grid";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+.cards {
+  @include grid(3, 1); // 12 columns, 10 rows
+  .card {
+    font-size: 64px;
+    font-weight: bold;
+    height: 390px;
+    width: 300px;
+    text-align: center;
+    // grid-column-end: span 2;
+    background-color: yellow;
+    border-radius: 10px;
+  }
+  .avatar img {
+    margin-top: 3%;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: solid 1px;
+    margin-bottom: 36.5%;
+    transition: 1s ease-in-out;
+    
+  }
+  .username {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10%;
+  }
+  .mailid {
+    font-size: 14px;
+    font-weight: lighter;
+    opacity: 0;
+  }
+  // margin-left:13em auto;
+  margin-right: auto;
+  align-items: center;
+  justify-items: center;
+}
+.pages {
+  .btnl,
+  .btnr {
+    margin-top: 0 1%;
+    background: transparent;
+    border: none;
+    width: 1%;
+    cursor: pointer;
+  }
+  text-align: center;
+  overflow: hidden;
+}
+.card:hover{
+    .avatar img{
+        border-radius: 5px;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 0;
+        transition: 1s ease-in-out;
+    }
+    .mailid{
+        opacity: 1;
+    }
+
+}
+//for tab
+@media screen and (min-width: 666px) and (max-width: 1024px) {
+  .cards {
+    @include grid(2, 1);
+    .card {
+      font-size: 64px;
+      font-weight: bold;
+      height: 375px;
+      width: 235px;
+      text-align: center;
+      background-color: yellow;
+      border-radius: 10px;
+    }
+    align-items: center;
+    align-items: center;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    .mailid{
+        opacity: 1;
+    }
+    .card:hover{
+      .avatar img{
+          border-radius: 5px;
+          width: 200px;
+          height: 200px;
+          margin-bottom: 0;
+          transition: 1s ease-in-out;
+      }
+    }
+  }
+  
+}
+//for mobile
+@media screen and (min-width: 300px) and (max-width: 665px) {
+  .cards {
+    @include grid(1, 1);
+    .card {
+      font-size: 64px;
+      font-weight: bold;
+      height: 375px;
+      width: 235px;
+      text-align: center;
+      background-color: yellow;
+      border-radius: 10px;
+    }
+    align-items: center;
+    justify-items: center;
+    .mailid{
+        opacity: 1;
+    }
+    .card:hover{
+      .avatar img{
+          border-radius: 5px;
+          width: 150px;
+          height: 150px;
+          margin-bottom: 0;
+          transition: 1s ease-in-out;
+      }
+    }
+  }
+  
+}
